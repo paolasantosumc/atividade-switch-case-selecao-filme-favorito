@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>PS | Escolha seu estilo de tema</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Seleção de Estilo de Filme Favorito</h1>
+        <p>Escolha seu estilo de filme favorito:</p>
+        <ol>
+            <li>Ação</li>
+            <li>Comédia</li>
+            <li>Drama</li>
+            <li>Terror</li>
+            <li>Ficção Científica</li>
+            <li>Romance</li>
+        </ol>
+        <button onclick="selecionarFilme()">Escolher estilo</button>
+        <h2 id="resultado"></h2>
+    </div>
+    <footer>Desenvolvido por Paola Santos</footer>
+    <script>
+        function selecionarFilme() {
+            let opcao = Number(prompt("Digite o número do seu estilo favorito:"));
+            let estilo;
+
+            switch (opcao) {
+                case 1:
+                    estilo = "Ação";
+                    break;
+
+                case 2:
+                    estilo = "Comédia";
+                    break;
+
+                case 3:
+                    estilo = "Drama";
+                    break;
+
+                case 4:
+                    estilo = "Terror";
+                    break;
+
+                case 5:
+                    estilo = "Ficção Científica";
+                    break;
+
+                case 6:
+                    estilo = "Romance";
+                    break;
+
+                default:
+                    estilo = "Opção inválida.";
+            }
+
+            document.getElementById("resultado").innerHTML =
+                "Seu estilo de filme favorito é: " + estilo;
+        }
+    </script>
+</body>
+</html>
